@@ -2,6 +2,19 @@
 
 **简体中文** · [繁體中文](./README.zh-TW.md) · [English](./README.en.md)
 
+## 上海社区修改版
+
+本仓库基于 VinsonFung 的《城市与地铁》制作，沿用原版的非商业使用许可。[原作者](https://github.com/VinsonFung) · [原版游戏](https://city-and-metro.pages.dev/) · [原始仓库](https://github.com/VinsonFung/city-and-metro)
+
+| 分支 | 社区版改动 | 本地切换 |
+| --- | --- | --- |
+| `main` | 上海地图新增 16 个设施（8 个高校校区、3 个医疗设施、5 个文旅体育及商业设施），调整 5 个既有设施，追加 4 条历史事件。 | `git switch main` |
+| `performance` | 保留上海地图改动，提供上海路网客流计算的基准测试和实验记录。 | `git switch performance` |
+
+例如，2005 年华政主体迁往松江后，长宁校区继续办学，游戏中该校区的教学客流权重随之下调。校区位置和迁移时间依据史料，客流权重为模拟估算。[上海地图修改清单](https://github.com/oldyemeister/city-and-metro-shanghai/blob/main/docs/shanghai-map/STATUS.md#上海地图修改摘要)
+
+## 原版游戏介绍
+
 **在真实城市里，画出你自己的地铁。**
 
 《城市与地铁》是一款在浏览器中游玩的单人地铁规划与城市经营游戏。从第一座车站开始，连接住区、商圈、校园与机场，跨过江河，逐步织出自己的交通网络。城市随年代发展，居民也会根据你的路网重新选择出行方式。
