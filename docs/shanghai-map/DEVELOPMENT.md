@@ -472,3 +472,9 @@ These are fixed-seed diagnostic cities, not the player's save. Nonlinear low-sha
 对照上游 bd76a32 与远端 codex/shanghai-map 的 f63b3fc，核实 de555aa 和 1b6c487 已发布。更新 STATUS.md，汇总 16 个新增设施、5 个既有设施调整及 4 条新增纪事，并标明早期提交含线路绘制等其他改动。本次仅整理交接文档。
 
 在独立工作目录运行 node scripts/verify-game.mjs（2.7.2、12 张地图、103 个源文件）、node scripts/check-shanghai-p1.mjs 和 node scripts/check-shanghai-education.mjs 均通过。使用 2000 年 7 月上海 121 站测试存档核查旧档恢复、设施步行可达性、校区客流权重和事件顺序。git diff --check 通过；三份根 README 与上游逐字节一致。
+
+## 2026-11-17 — 精简独立仓库首次推送的历史
+
+在独立仓库 city-and-metro-shanghai 的 main 上，以原版 bd76a32 为界，重写之后的上海提交，从历史中移出 perf-20261116 的 8 张 ready.png。用本地分支 backup/main-before-screenshot-cleanup-81cdc35 保留旧提交和完整截图；.gitignore 只忽略 Shanghai 性能证据目录中的 PNG。上游历史、项目图片、P1 验收截图和其他性能记录均保留。performance 仍使用原历史。STATUS.md 和教育检查的基线引用已更新；新旧 P1 基线的 js/data_sh.js 完全相同。
+
+逐对核对原有 42 个提交，文件树仅有指定截图差异。以 git pack-objects --stdout --revs --thin --delta-base-offset 模拟从空仓库首次推送，包体由 68.95 MiB 减至约 47.4 MiB。原仓库基线和临时仓库的 node scripts/verify-game.mjs 均通过（2.7.2、12 张地图、103 个源文件）。使用忽略的 2000 年 7 月上海 121 站存档副本，node scripts/check-shanghai-p1.mjs all 和 node scripts/check-shanghai-education.mjs 均通过。git diff --check 通过。只读查询目标 GitHub 仓库时尚无 main。

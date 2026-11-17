@@ -11,7 +11,7 @@ const C=c.CM,plain=x=>JSON.parse(JSON.stringify(x)),ym=(y,m)=>y+(m-1)/12;
 C.UI=function(){};for(const f of ['settings','corp','fleet','screens'])await load('js/'+f+'.js');
 const current=C.MAPS.sh.data;
 const bc={CM:{U:C.U,CFG:C.CFG,GEOS:C.GEOS,DATA:{plans:C.DATA.plans}}};bc.window=bc;vm.createContext(bc);
-vm.runInContext(execFileSync('git',['show','de555aaa37a18ddd91033cda6977712d33bb4ed1:js/data_sh.js'],{cwd:root,encoding:'utf8'}),bc);
+vm.runInContext(execFileSync('git',['show','a3b1b10fe29ab535a58c42f7fb4ab8c747a07284:js/data_sh.js'],{cwd:root,encoding:'utf8'}),bc);
 const old=bc.CM.MAP_LIST.find(x=>x.id==='sh').data;bc.CM.MAP_LIST=[];
 vm.runInContext(await fs.readFile(new URL('js/data_sh.js',root),'utf8'),bc);
 const raw=bc.CM.MAP_LIST.find(x=>x.id==='sh').data;

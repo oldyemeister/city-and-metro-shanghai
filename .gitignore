@@ -29,3 +29,6 @@ node_modules/
 # Local player exports; keep fixture instructions tracked
 /savedgames/*.cmsave.json
 /savedgames/test/*.cmsave.json
+
+# Local Shanghai performance screenshots
+/docs/shanghai-map/evidence/perf-*/**/*.png
